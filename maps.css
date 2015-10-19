@@ -1,0 +1,19 @@
+body {
+  background: #D1D5DE;
+}
+
+.email-header {
+  margin-bottom: 14px;
+}
+.email-header td{
+  vertical-align: bottom
+}
+.header-date, .header-link {
+  vertical-align: bottom;
+}
+.header-link {
+  text-align: right;
+}
+.white {
+  background-color: #ffffff;
+}
