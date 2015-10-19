@@ -50,7 +50,7 @@ img {
 
 center {
   width: 100%;
-  min-width: 580px;
+  min-width: 650px;
 }
 
 a img { 
@@ -95,7 +95,7 @@ table.body {
 }
 
 table.container {
-  width: 580px;
+  width: 650px;
   margin: 0 auto;
   text-align: inherit;
 }
@@ -141,44 +141,44 @@ table.container td.last {
   padding-right: 0px;
 }
 
-table.one { width: 30px; }
-table.two { width: 80px; }
-table.three { width: 130px; }
-table.four { width: 180px; }
-table.five { width: 230px; }
-table.six { width: 280px; }
-table.seven { width: 330px; }
-table.eight { width: 380px; }
-table.nine { width: 430px; }
-table.ten { width: 480px; }
-table.eleven { width: 530px; }
-table.twelve { width: 580px; }
+table.one { width: 45px; }
+table.two { width: 100px; }
+table.three { width: 155px; }
+table.four { width: 210px; }
+table.five { width: 265px; }
+table.six { width: 320px; }
+table.seven { width: 375px; }
+table.eight { width: 430px; }
+table.nine { width: 485px; }
+table.ten { width: 540px; }
+table.eleven { width: 595px; }
+table.twelve { width: 650px; }
 
-table.one center { min-width: 30px; }
-table.two center { min-width: 80px; }
-table.three center { min-width: 130px; }
-table.four center { min-width: 180px; }
-table.five center { min-width: 230px; }
-table.six center { min-width: 280px; }
-table.seven center { min-width: 330px; }
-table.eight center { min-width: 380px; }
-table.nine center { min-width: 430px; }
-table.ten center { min-width: 480px; }
-table.eleven center { min-width: 530px; }
-table.twelve center { min-width: 580px; }
+table.one center { min-width: 45px; }
+table.two center { min-width: 100px; }
+table.three center { min-width: 155px; }
+table.four center { min-width: 210px; }
+table.five center { min-width: 265px; }
+table.six center { min-width: 320px; }
+table.seven center { min-width: 375px; }
+table.eight center { min-width: 430px; }
+table.nine center { min-width: 485px; }
+table.ten center { min-width: 540px; }
+table.eleven center { min-width: 595px; }
+table.twelve center { min-width: 650px; }
 
-table.one .panel center { min-width: 10px; }
-table.two .panel center { min-width: 60px; }
-table.three .panel center { min-width: 110px; }
-table.four .panel center { min-width: 160px; }
-table.five .panel center { min-width: 210px; }
-table.six .panel center { min-width: 260px; }
-table.seven .panel center { min-width: 310px; }
-table.eight .panel center { min-width: 360px; }
-table.nine .panel center { min-width: 410px; }
-table.ten .panel center { min-width: 460px; }
-table.eleven .panel center { min-width: 510px; }
-table.twelve .panel center { min-width: 560px; }
+table.one .panel center { min-width: 25px; }
+table.two .panel center { min-width: 80px; }
+table.three .panel center { min-width: 135px; }
+table.four .panel center { min-width: 190px; }
+table.five .panel center { min-width: 245px; }
+table.six .panel center { min-width: 300px; }
+table.seven .panel center { min-width: 355px; }
+table.eight .panel center { min-width: 410px; }
+table.nine .panel center { min-width: 465px; }
+table.ten .panel center { min-width: 520px; }
+table.eleven .panel center { min-width: 575px; }
+table.twelve .panel center { min-width: 630px; }
 
 .body .columns td.one,
 .body .column td.one { width: 8.333333%; }
@@ -205,17 +205,17 @@ table.twelve .panel center { min-width: 560px; }
 .body .columns td.twelve,
 .body .column td.twelve { width: 100%; }
 
-td.offset-by-one { padding-left: 50px; }
-td.offset-by-two { padding-left: 100px; }
-td.offset-by-three { padding-left: 150px; }
-td.offset-by-four { padding-left: 200px; }
-td.offset-by-five { padding-left: 250px; }
-td.offset-by-six { padding-left: 300px; }
-td.offset-by-seven { padding-left: 350px; }
-td.offset-by-eight { padding-left: 400px; }
-td.offset-by-nine { padding-left: 450px; }
-td.offset-by-ten { padding-left: 500px; }
-td.offset-by-eleven { padding-left: 550px; }
+td.offset-by-one { padding-left: 65px; }
+td.offset-by-two { padding-left: 120px; }
+td.offset-by-three { padding-left: 175px; }
+td.offset-by-four { padding-left: 230px; }
+td.offset-by-five { padding-left: 285px; }
+td.offset-by-six { padding-left: 340px; }
+td.offset-by-seven { padding-left: 395px; }
+td.offset-by-eight { padding-left: 450px; }
+td.offset-by-nine { padding-left: 505px; }
+td.offset-by-ten { padding-left: 560px; }
+td.offset-by-eleven { padding-left: 615px; }
 
 td.expander {
   visibility: hidden;
@@ -247,7 +247,7 @@ table.column .text-pad-right {
 
 .block-grid {
   width: 100%;
-  max-width: 580px;
+  max-width: 650px;
 }
 
 .block-grid td {
@@ -256,31 +256,31 @@ table.column .text-pad-right {
 }
 
 .two-up td {
-  width:270px;
+  width:305px;
 }
 
 .three-up td {
-  width:173px;
+  width:196px;
 }
 
 .four-up td {
-  width:125px;
+  width: 142px;
 }
 
 .five-up td {
-  width:96px;
+  width: 110px;
 }
 
 .six-up td {
-  width:76px;
+  width: 88px;
 }
 
 .seven-up td {
-  width:62px;
+  width: 72px;
 }
 
 .eight-up td {
-  width:52px;
+  width: 61px;
 }
 
 /* Alignment & Visibility Classes */
