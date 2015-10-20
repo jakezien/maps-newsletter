@@ -205,9 +205,12 @@ table.twelve .panel center { min-width: 630px; }
 .body .columns td.twelve,
 .body .column td.twelve { width: 100%; }
 
+td.offset-by-half { padding-left: 24px; }
 td.offset-by-one { padding-left: 65px; }
 td.offset-by-two { padding-left: 120px; }
+td.offset-by-two-and-half { padding-left: 147px; }
 td.offset-by-three { padding-left: 175px; }
+td.offset-by-three-and-half { padding-left: 202px; }
 td.offset-by-four { padding-left: 230px; }
 td.offset-by-five { padding-left: 285px; }
 td.offset-by-six { padding-left: 340px; }
@@ -357,15 +360,15 @@ a {
 }
 
 a:hover { 
-  color: #2795b6 !important;
+  color: #2795b6;
 }
 
 a:active { 
-  color: #2795b6 !important;
+  color: #2795b6;
 }
 
 a:visited { 
-  color: #2ba6cb !important;
+  color: #2ba6cb;
 }
 
 h1 a, 
@@ -648,6 +651,7 @@ body.outlook p {
   table[class="body"] .columns td.twelve,
   table[class="body"] .column td.twelve { width: 100% !important; }
 
+  table[class="body"] td.offset-by-one-half,
   table[class="body"] td.offset-by-one,
   table[class="body"] td.offset-by-two,
   table[class="body"] td.offset-by-three,
