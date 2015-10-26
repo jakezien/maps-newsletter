@@ -1,0 +1,73 @@
+//- From https://github.com/memeticlabs/jink#documentation
+
+mixin container()
+  table.container(class!=attributes.class)
+    tr
+      td
+        if block
+          block
+
+mixin row()
+  table.row(class!=attributes.class)
+    tr
+      if block
+        block
+
+//- the columns mixin takes in the 
+//- the number of columns and 
+//- the name of the classes(space separated)
+//- to be applied on the `wrapper` of the column
+mixin columns(number, wrapperClasses, columnClasses)
+  - var wrapperClasses = wrapperClasses ? wrapperClasses : ''
+  - var columnClass = number + (attributes.visibility ? ' ' + attributes.visibility: '') + ' columns' + (columnClasses ? ' ' + columnClasses : '')
+
+  td.wrapper(class=wrapperClasses)
+    - if (attributes.visibility === "show-for-small")
+      // [if !mso]><!-- 
+    table(class!= columnClass)
+      tr
+        if block
+          block
+        td.expander
+    - if (attributes.visibility === "show-for-small")
+      // <![endif]
+
+mixin column(number, wrapperClasses, columnClasses)
+  - var wrapperClasses = wrapperClasses ? wrapperClasses : ''
+  - var columnClass = number + (attributes.visibility ? ' ' + attributes.visibility: '') + ' column' + (columnClasses ? ' ' +columnClasses : '')
+
+  td.wrapper(class=wrapperClasses)
+    - if (attributes.visibility === "show-for-small")
+      // [if !mso]><!-- 
+    table(class!= columnClass)
+      tr
+        if block
+          block
+        td.expander
+    - if (attributes.visibility === "show-for-small")
+      // <![endif]
+
+mixin fullWidthRow(rowClasses)
+  +row()(class=rowClasses)
+    td.center(align="center")
+      center
+        +container
+          +columns('twelve', 'last') 
+            if block
+              block
+            td.expander
+
+
+mixin blockGrid(number)
+  - var grid = "block-grid " + number + '-up'
+    table(class=grid)
+      tr
+        if block
+          block
+
+
+mixin button(label)
+  table.button(class!=(attributes.style ? attributes.style : ''))
+    tr
+      td
+        a= label
