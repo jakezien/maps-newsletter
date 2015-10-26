@@ -1,0 +1,27 @@
+{
+  "name": "maps-newsletter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakezien/maps-newsletter.git"
+  },
+  "author": "Jake Zien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakezien/maps-newsletter/issues"
+  },
+  "homepage": "https://github.com/jakezien/maps-newsletter",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-stylus": "^2.1.0",
+    "stylus": "^0.52.4"
+  }
+}

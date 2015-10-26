@@ -13,7 +13,6 @@ font-family-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
 font-family-serif = Georgia, serif
 
 
-
 // Styles
 
 h1
@@ -88,7 +87,7 @@ span.num
   
   
 
-body
+body, table.body
   background mGreyBlue
   color mTextBlue
 
@@ -137,12 +136,34 @@ table.title-container-table
   margin-bottom -80px
   
 img.signature
-  width 200px
+  height 60px
   float none
 
 .table-of-contents h2
   margin-top 24px
 
+td.stats-cell
+  text-align center
+
+.stats-amount
+  font-family font-family-serif    
+  font-size 18px
+  color mBlueOld
+  display block
+
+.stats-desc
+  font-family font-family-sans
+  font-size 10px
+  color mBlueOld
+  display block
+
+.stats-donate-button
+  h2
+    color mOrange
+    margin 0
+    text-align center
+  .stats-desc
+    color mOrange
 
 @media only screen and (max-width: 600px) 
   .columns td.title-container
