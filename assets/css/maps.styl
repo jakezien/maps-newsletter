@@ -4,6 +4,7 @@ mBlueOld    = #6A92C9
 mDkBlue     = #00264F
 mLtBlue     = #BCCEE7
 mOrange     = #FE6800
+mLtOrange   = #FFC3A5
 mGreyBlue   = #D1D5DE
 mLtGreyBlue = #E3E9FD
 mTextBlue   = #29333D
@@ -39,6 +40,8 @@ p
   font-size 14px
   color mTextBlue
   line-height 20px
+  &.margin-zero
+    margin 0    
   
 a
   color mBlue
@@ -54,6 +57,10 @@ hr
   background-color mDkBlue
   margin 28px auto 0 0
   
+table[class='body'] table.column td.width-auto,
+table[class='body'] table.columns td.width-auto
+  width auto !important
+  
 .caption p
   font-family font-family-sans
   font-size 12px
@@ -65,8 +72,20 @@ hr
 .interstitial-image img
   border 4px solid white
   box-sizing border-box;
+  
   .caption p
     text-align center
+    
+.interstitial-text
+  padding 10px 0
+  p
+    text-align center
+    font-size 16px
+    color mTextLtBlue
+    text-shadow 0 1px 0 mLtGreyBlue
+    line-height 1.25
+  a
+    text-decoration underline
 
 span.num
   display inline-block
@@ -85,8 +104,6 @@ span.num
   top -1px
   left -1px
   
-  
-
 body, table.body
   background mGreyBlue
   color mTextBlue
@@ -142,8 +159,28 @@ img.signature
 .table-of-contents h2
   margin-top 24px
 
+td.stats-container
+  border 1px solid
+  border-radius 3px
+  padding 8px 0 !important
+  text-align center
+  vertical-align middle
+  margin-bottom 30px
+  &.blue
+    border-color mGreyBlue
+  &.orange
+    border-color mLtOrange
+    &:hover
+      transition all 0.2s ease
+      border-color mOrange
+      background-color mOrange
+      h2, .stats-desc
+        color white
+
+
 td.stats-cell
   text-align center
+  padding 6px !important
 
 .stats-amount
   font-family font-family-serif    
@@ -171,3 +208,18 @@ td.stats-cell
   
   table.title-container-table
     margin-bottom 0
+  
+  table[class='body'] table.column td.width-auto,
+  table[class='body'] table.columns td.width-auto
+    width auto !important
+    
+  table[class="body"] img.signature
+    height 60px !important
+    float none
+    
+  td.stats-container
+    margin-bottom 4px
+    &.blue
+      margin-top 6px
+      border-radius 0
+      border-width 1px 0 0 0

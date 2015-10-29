@@ -773,6 +773,9 @@ p {
   color: #29333d;
   line-height: 20px;
 }
+p.margin-zero {
+  margin: 0;
+}
 a {
   color: #3d76c5;
   -webkit-transition: color 0.15s ease;
@@ -791,6 +794,10 @@ hr {
   background-color: #00264f;
   margin: 28px auto 0 0;
 }
+table[class='body'] table.column td.width-auto,
+table[class='body'] table.columns td.width-auto {
+  width: auto !important;
+}
 .caption p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -805,6 +812,19 @@ hr {
 }
 .interstitial-image img .caption p {
   text-align: center;
+}
+.interstitial-text {
+  padding: 10px 0;
+}
+.interstitial-text p {
+  text-align: center;
+  font-size: 16px;
+  color: #546982;
+  text-shadow: 0 1px 0 #e3e9fd;
+  line-height: 1.25;
+}
+.interstitial-text a {
+  text-decoration: underline;
 }
 span.num {
   display: inline-block;
@@ -884,8 +904,33 @@ img.signature {
 .table-of-contents h2 {
   margin-top: 24px;
 }
+td.stats-container {
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 8px 0 !important;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+td.stats-container.blue {
+  border-color: #d1d5de;
+}
+td.stats-container.orange {
+  border-color: #ffc3a5;
+}
+td.stats-container.orange:hover {
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+  border-color: #fe6800;
+  background-color: #fe6800;
+}
+td.stats-container.orange:hover h2,
+td.stats-container.orange:hover .stats-desc {
+  color: #fff;
+}
 td.stats-cell {
   text-align: center;
+  padding: 6px !important;
 }
 .stats-amount {
   font-family: Georgia, serif;
@@ -913,5 +958,21 @@ td.stats-cell {
   }
   table.title-container-table {
     margin-bottom: 0;
+  }
+  table[class='body'] table.column td.width-auto,
+  table[class='body'] table.columns td.width-auto {
+    width: auto !important;
+  }
+  table[class="body"] img.signature {
+    height: 60px !important;
+    float: none;
+  }
+  td.stats-container {
+    margin-bottom: 4px;
+  }
+  td.stats-container.blue {
+    margin-top: 6px;
+    border-radius: 0;
+    border-width: 1px 0 0 0;
   }
 }

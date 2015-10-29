@@ -1,9 +1,9 @@
 //- From https://github.com/memeticlabs/jink#documentation
 
-mixin container()
+mixin container(tdClasses)
   table.container(class!=attributes.class)
     tr
-      td
+      td(class=(tdClasses ? tdClasses : ''))
         if block
           block
 
@@ -57,7 +57,6 @@ mixin fullWidthRow(rowClasses)
               block
             td.expander
 
-
 mixin blockGrid(number)
   - var grid = "block-grid " + number + '-up'
     table(class=grid)
@@ -71,3 +70,35 @@ mixin button(label)
     tr
       td
         a= label
+
+
+mixin tocItem(number, title)
+  table: tr
+    td(class='width-auto')
+      span(class='num')= number
+    td
+      p(class='margin-zero')= title
+
+mixin basicColumn(padBottom, rowClasses)
+  +row(class=(rowClasses ? rowClasses : ''))
+    +columns('eleven', 'last offset-by-half')
+      td(class=(padBottom ? 'text-pad pad-bottom' : 'text-pad'))
+        if block
+          block
+
+mixin donationStats(cost, raised, needed)
+  +row()
+    +columns('nine', 'stats-container blue')
+      td.four.sub-columns.stats-cell
+        span.stats-amount= '$' + cost
+        span.stats-desc estimated study cost
+      td.four.sub-columns.stats-cell
+        span.stats-amount= '$' + raised
+        span.stats-desc raised to date
+      td.four.sub-columns.stats-cell.last
+        span.stats-amount= '$' + needed
+        span.stats-desc still needed
+    +columns('three', 'stats-container orange')
+      a.stats-donate-button(href='http://www.maps.org/donate')
+        h2 Donate Now
+        span.stats-desc help fund this study
