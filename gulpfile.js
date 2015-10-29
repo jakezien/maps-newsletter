@@ -14,7 +14,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('dev-css', function() {
-  gulp.src('assets/css/style.styl', {base: 'assets/'})
+  gulp.src('assets/css/style.styl', {base: 'assets/css/'})
     .pipe(stylus())
     .pipe(autoprefixer())
     .pipe(gulp.dest('prod'));

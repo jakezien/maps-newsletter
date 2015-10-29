@@ -88,7 +88,7 @@ mixin basicColumn(padBottom, rowClasses)
 
 mixin donationStats(cost, raised, needed)
   +row()
-    +columns('nine', 'stats-container blue')
+    +columns('eight', 'stats-container blue')
       td.four.sub-columns.stats-cell
         span.stats-amount= '$' + cost
         span.stats-desc estimated study cost
@@ -99,6 +99,9 @@ mixin donationStats(cost, raised, needed)
         span.stats-amount= '$' + needed
         span.stats-desc still needed
     +columns('three', 'stats-container orange')
-      a.stats-donate-button(href='http://www.maps.org/donate')
-        h2 Donate Now
-        span.stats-desc help fund this study
+      td.one.sub-column
+      td.eleven.sub-columns
+        table.stats-cell: tr: td
+          a.stats-donate-button(href='http://www.maps.org/donate')
+            h2 Donate Now
+            span.stats-desc help fund this study

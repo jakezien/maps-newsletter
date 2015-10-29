@@ -1,8 +1,20 @@
 // —————————— HEADER —————————— 
-+fullWidthRow('header email-header')
++fullWidthRow('header email-header hide-for-small')
   td.three.sub-columns.header-date November 2015
   td.six.sub-columns.header-logo
     a(href='http://www.maps.org')
       img(src='img/maps@2x.gif')
   td.three.sub-columns.header-link
     a(href='http://www.maps.org') maps.org
+
+
++fullWidthRow('header email-header show-for-small')
+  td
+    +row()
+      td.six.sub-columns.header-date November 2015
+      td.six.sub-columns.header-link
+        a(href='http://www.maps.org') maps.org
+    +row()
+      td.header-logo
+        a(href='http://www.maps.org')
+          img(src='img/maps@2x.gif')

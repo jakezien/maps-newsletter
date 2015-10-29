@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <!-- For testing only-->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <table class="body">
@@ -14,7 +14,7 @@
             <!-- Email content-->
 
             <!-- —————————— HEADER —————————— -->
-            <table class="row header email-header">
+            <table class="row header email-header hide-for-small">
               <tr>
                 <td align="center" class="center">
                   <center>
@@ -39,6 +39,41 @@
                 </td>
               </tr>
             </table>
+            <table class="row header email-header show-for-small">
+              <tr>
+                <td align="center" class="center">
+                  <center>
+                    <table class="container">
+                      <tr>
+                        <td>
+                          <td class="wrapper last">
+                            <table class="twelve columns">
+                              <tr> 
+                                <td>
+                                  <table class="row">
+                                    <tr>
+                                      <td class="six sub-columns header-date">November 2015</td>
+                                      <td class="six sub-columns header-link"><a href="http://www.maps.org">maps.org</a></td>
+                                    </tr>
+                                  </table>
+                                  <table class="row">
+                                    <tr>
+                                      <td class="header-logo"><a href="http://www.maps.org"><img src="img/maps@2x.gif"/></a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="expander"></td>
+                                <td class="expander"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </td>
+              </tr>
+            </table>
 
             <!-- —————————— FRONT PAGE —————————— -->
             <table class="container white front-page">
@@ -47,7 +82,7 @@
                   <table class="row">
                     <tr>
                       <td>
-                        <!-- ——— COVER IMAGE ———--><img src="http://placehold.it/650x280"/>
+                        <!-- ——— COVER IMAGE ———--><img height="280px" src="http://placehold.it/650x280"/>
                       </td>
                     </tr>
                   </table>
@@ -67,7 +102,7 @@
                               <!-- ——— HEADLINE ——— -->
                               <h1>The Title of this Newsletter Will Go Right Here</h1>
                               <p>Subheadline providing a two-to-three-line summary will fit into this space right here</p>
-                              <hr/>
+                              <hr class="bold"/>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -110,7 +145,7 @@
                           <tr>
                             <td class="text-pad">
                               <h1>Contents</h1>
-                              <hr/>
+                              <hr class="bold"/>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -263,7 +298,7 @@
                           <tr>
                             <td class="text-pad">
                               <h1>Treating PTSD with MDMA-Assisted Psychotherapy</h1>
-                              <hr/>
+                              <hr class="bold"/>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -283,7 +318,7 @@
                               <table class="row">
                                 <tr>
                                   <td class="wrapper stats-container blue">
-                                    <table class="nine columns">
+                                    <table class="eight columns">
                                       <tr>
                                         <td class="four sub-columns stats-cell"><span class="stats-amount">$1,428,000</span><span class="stats-desc">estimated study cost</span></td>
                                         <td class="four sub-columns stats-cell"><span class="stats-amount">$1,386,000</span><span class="stats-desc">raised to date</span></td>
@@ -294,8 +329,16 @@
                                   </td>
                                   <td class="wrapper stats-container orange">
                                     <table class="three columns">
-                                      <tr><a href="http://www.maps.org/donate" class="stats-donate-button">
-                                          <h2>Donate Now</h2><span class="stats-desc">help fund this study</span></a>
+                                      <tr>
+                                        <td class="one sub-column"></td>
+                                        <td class="eleven sub-columns">
+                                          <table class="stats-cell">
+                                            <tr>
+                                              <td><a href="http://www.maps.org/donate" class="stats-donate-button">
+                                                  <h2>Donate Now</h2><span class="stats-desc">help fund this study</span></a></td>
+                                            </tr>
+                                          </table>
+                                        </td>
                                         <td class="expander"></td>
                                       </tr>
                                     </table>
@@ -321,7 +364,7 @@
                               <table class="row">
                                 <tr>
                                   <td class="wrapper stats-container blue">
-                                    <table class="nine columns">
+                                    <table class="eight columns">
                                       <tr>
                                         <td class="four sub-columns stats-cell"><span class="stats-amount">$1,428,000</span><span class="stats-desc">estimated study cost</span></td>
                                         <td class="four sub-columns stats-cell"><span class="stats-amount">$1,386,000</span><span class="stats-desc">raised to date</span></td>
@@ -332,8 +375,16 @@
                                   </td>
                                   <td class="wrapper stats-container orange">
                                     <table class="three columns">
-                                      <tr><a href="http://www.maps.org/donate" class="stats-donate-button">
-                                          <h2>Donate Now</h2><span class="stats-desc">help fund this study</span></a>
+                                      <tr>
+                                        <td class="one sub-column"></td>
+                                        <td class="eleven sub-columns">
+                                          <table class="stats-cell">
+                                            <tr>
+                                              <td><a href="http://www.maps.org/donate" class="stats-donate-button">
+                                                  <h2>Donate Now</h2><span class="stats-desc">help fund this study</span></a></td>
+                                            </tr>
+                                          </table>
+                                        </td>
                                         <td class="expander"></td>
                                       </tr>
                                     </table>
@@ -355,7 +406,7 @@
             <table class="container">
               <tr>
                 <td>
-                  <table class="row interstitial-text">
+                  <table class="row interstitial interstitial-text">
                     <tr>
                       <td class="wrapper last offset-by-one">
                         <table class="ten columns">
@@ -374,7 +425,7 @@
             </table>
 
             <!-- —————————— SUPPORT MAPS —————————— -->
-            <table class="container white table-of-contents">
+            <table class="container white support">
               <tr>
                 <td>
                   <table class="row">
@@ -384,7 +435,7 @@
                           <tr>
                             <td class="text-pad">
                               <h1>Support MAPS</h1>
-                              <hr/>
+                              <hr class="bold"/>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -399,6 +450,70 @@
                           <tr>
                             <td class="text-pad">
                               <h2>July Giving Report: Our Special Thanks</h2>
+                              <table class="row">
+                                <tr>
+                                  <td class="wrapper">
+                                    <table class="seven columns">
+                                      <tr>
+                                        <td>
+                                          <p>In July 2015, 484 individuals gave $96,640 to support MAPS' psychedelic research and edu-cation projects. Our special thanks goes to these generous donors:</p>
+                                          <h3>MDMA Research </h3>
+                                          <ul> 
+                                            <li>Britt Selvitelle ($10,000) for MDMA-assisted psychotherapy for PTSD research </li>
+                                            <li>Dr. Philip Wolfson ($2,000) for anxiety associated with life-threatening illness study</li>
+                                          </ul>
+                                          <h3>Outreach and Education</h3>
+                                          <ul>
+                                            <li>Mental Insight Foundation ($10,000) for our participation in the Grateful Dead Fare Thee Well Tour </li>
+                                          </ul>
+                                          <h3>General Support</h3>
+                                          <ul>
+                                            <li>Google Matching Gift ($2,723)</li>
+                                            <li>Anonymous ($1,500)</li>
+                                          </ul>
+                                        </td>
+                                        <td class="expander"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td class="wrapper">
+                                    <table class="four last columns">
+                                      <tr>
+                                        <td>
+                                          <table class="row">
+                                            <tr>
+                                              <td><img src="http://maps.org/news-letters/v25n2/v25n2_frontcover.png"/></td>
+                                            </tr>
+                                          </table>
+                                          <table class="row">
+                                            <tr>
+                                              <td>
+                                                <p class="caption">Watch the video to learn about MDMA biomarker research being conducted at Stanford University.</p>
+                                                <hr class="bold"/>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <td class="expander"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="row">
+                                <tr>
+                                  <td>
+                                    <p>Also, a warm thank you to all those who gave to our Zendo Project crowdfunding campaign on Indiegogo. We especially recognize Dr. Bronner's Magic Soaps, Britt Selvitelle, and two $10,000 anonymous donations, one a matching gift and one not processed through Indiegogo. <a href="http://www.maps.org/donate">maps.org/donate</a></p>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="row pad-bottom">
+                                <tr>
+                                  <td class="interstitial">
+                                    <p class="callout">Learn about <a href="http://www.maps.org/donate">including MAPS in your will or trust.</a></p>
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -406,6 +521,191 @@
                       </td>
                     </tr>
                   </table>
+                </td>
+              </tr>
+            </table>
+
+            <!-- —————————— FOOTER —————————— -->
+            <table class="row footer email-footer pad-bottom">
+              <tr>
+                <td align="center" class="center">
+                  <center>
+                    <table class="container">
+                      <tr>
+                        <td>
+                          <td class="wrapper last">
+                            <table class="twelve columns">
+                              <tr> 
+                                <table class="row">
+                                  <tr>
+                                    <td class="four sub-columns footer-contact"> 
+                                      <p class="caption"><a href="http://www.maps.org">www.maps.org</a><br/><a href="tel:18314296362">tel:  +1 831 429 MDMA</a><br/>fax: +1 831 429 6370</p>
+                                    </td>
+                                    <td class="four sub-columns footer-logo center"><a href="http://www.maps.org"><img src="img/maps-footer.gif" class="center"/></a></td>
+                                    <td class="four sub-columns footer-address last">
+                                      <p class="caption">1115 Mission Street<br/>Santa Cruz, CA, USA<br/>95060-9989</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table class="row">
+                                  <tr>
+                                    <td align="center" class="center">
+                                      <center>
+                                        <table class="container">
+                                          <tr>
+                                            <td>
+                                              <td class="wrapper last">
+                                                <table class="twelve columns">
+                                                  <tr> 
+                                                    <table class="row">
+                                                      <tr>
+                                                        <td align="center" class="center">
+                                                          <center>
+                                                            <table class="container">
+                                                              <tr>
+                                                                <td>
+                                                                  <td class="wrapper last">
+                                                                    <table class="twelve columns">
+                                                                      <tr> 
+                                                                        <td class="full-width">
+                                                                          <hr/>
+                                                                        </td>
+                                                                        <td class="expander"></td>
+                                                                        <td class="expander"></td>
+                                                                      </tr>
+                                                                    </table>
+                                                                  </td>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                          </center>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <table class="row">
+                                                      <tr>
+                                                        <td align="center" class="center">
+                                                          <center>
+                                                            <table class="container">
+                                                              <tr>
+                                                                <td>
+                                                                  <td class="wrapper last">
+                                                                    <table class="twelve columns">
+                                                                      <tr> 
+                                                                        <td class="wrapper social-container">
+                                                                          <table class="six columns">
+                                                                            <tr>
+                                                                              <td class="sub-columns three twitter"><a href="http://www.twitter.com/mapsnews"><img src="/img/twitter.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three facebook"><a href="http://www.facebook.com/mapsmdma"><img src="/img/facebook.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three instagram"><a href="http://www.instagram.com/mapsnews"><img src="/img/instagram.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three last youtube"><a href="http://www.youtube.com/mapsmdma"><img src="/img/youtube.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="expander"></td>
+                                                                            </tr>
+                                                                          </table>
+                                                                        </td>
+                                                                        <td class="wrapper last">
+                                                                          <table class="six columns">
+                                                                            <tr>
+                                                                              <td class="sub-columns three reddit"><a href="http://www.reddit.com/user/MAPSPsychedelic/"><img src="/img/reddit.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three pinterest"><a href="http://www.pinterest.com/mapsnews"><img src="/img/pinterest.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three tumblr"><a href="http://mapsnews.tumblr.com/"><img src="/img/tumblr.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="sub-columns three last google-plus"><a href="http://plus.google.com/u/0/114671001319740333157/"><img src="/img/google-plus.gif" width="48px" height="48px" class="social-icon"/></a></td>
+                                                                              <td class="expander"></td>
+                                                                            </tr>
+                                                                          </table>
+                                                                        </td>
+                                                                        <td class="expander"></td>
+                                                                        <td class="expander"></td>
+                                                                      </tr>
+                                                                    </table>
+                                                                  </td>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                          </center>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <table class="row">
+                                                      <tr>
+                                                        <td align="center" class="center">
+                                                          <center>
+                                                            <table class="container">
+                                                              <tr>
+                                                                <td>
+                                                                  <td class="wrapper last">
+                                                                    <table class="twelve columns">
+                                                                      <tr> 
+                                                                        <td class="full-width">
+                                                                          <hr/>
+                                                                        </td>
+                                                                        <td class="expander"></td>
+                                                                        <td class="expander"></td>
+                                                                      </tr>
+                                                                    </table>
+                                                                  </td>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                          </center>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <td class="expander"></td>
+                                                    <td class="expander"></td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </center>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table class="row pad-bottom">
+                                  <tr>
+                                    <td align="center" class="center">
+                                      <center>
+                                        <table class="container">
+                                          <tr>
+                                            <td>
+                                              <td class="wrapper last">
+                                                <table class="twelve columns">
+                                                  <tr> 
+                                                    <td class="sub-columns three footer-link">
+                                                      <p><a href="http://www.maps.org">Unsubscribe</a></p>
+                                                    </td>
+                                                    <td class="sub-columns three footer-link">
+                                                      <p><a href="http://www.maps.org">Share this Newsletter</a></p>
+                                                    </td>
+                                                    <td class="sub-columns three footer-link">
+                                                      <p><a href="http://www.maps.org">About MAPS</a></p>
+                                                    </td>
+                                                    <td class="sub-columns three footer-link last">
+                                                      <p><a href="http://www.maps.org">Donate</a></p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                    <td class="expander"></td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </center>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <td class="expander"></td>
+                                <td class="expander"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
                 </td>
               </tr>
             </table>

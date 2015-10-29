@@ -7,6 +7,7 @@ mOrange     = #FE6800
 mLtOrange   = #FFC3A5
 mGreyBlue   = #D1D5DE
 mLtGreyBlue = #E3E9FD
+mDkGreyBlue = #9DA5B3
 mTextBlue   = #29333D
 mTextLtBlue = #546982
 
@@ -35,13 +36,22 @@ h2
   margin-top 8px
   margin-bottom 8px
   
-p
+h3
+  font-family font-family-sans
+  font-size 15px
+  font-weight normal
+  line-height 1.25
+  color mBlue
+  margin-top 20px
+  margin-bottom 8px
+  
+p, li
   font-family font-family-serif
   font-size 14px
   color mTextBlue
   line-height 20px
   &.margin-zero
-    margin 0    
+    margin 0
   
 a
   color mBlue
@@ -50,24 +60,59 @@ a
     color mOrange !important
   &:visited
     color mBlueOld
+    
+ul, li
+  margin 0
+  padding 0
+li
+  margin-bottom 8px
 
-hr
+hr.bold
   width 200px
   height 4px
   background-color mDkBlue
   margin 28px auto 0 0
+hr
+  width 100%
+  height 1px
+  background-color mDkGreyBlue
+  margin 0
+  
+.full-width
+  width 100% !important
+
   
 table[class='body'] table.column td.width-auto,
 table[class='body'] table.columns td.width-auto
   width auto !important
   
-.caption p
+.caption p, p.caption
   font-family font-family-sans
   font-size 12px
   color mTextLtBlue
   text-shadow 0 1px 0 mLtGreyBlue
   text-align center
   line-height 18px
+
+.interstitial 
+  padding 16px 0
+  text-align center
+  p
+    text-align center
+    font-size 16px
+    color mTextLtBlue
+    text-shadow 0 1px 0 mLtGreyBlue
+    line-height 1.5
+  a
+    text-decoration underline
+
+.white .interstitial p, 
+.white p.interstitial
+  color mBlueOld
+  text-shadow none
+  a
+    color mBlueOld
+
 
 .interstitial-image img
   border 4px solid white
@@ -78,14 +123,7 @@ table[class='body'] table.columns td.width-auto
     
 .interstitial-text
   padding 10px 0
-  p
-    text-align center
-    font-size 16px
-    color mTextLtBlue
-    text-shadow 0 1px 0 mLtGreyBlue
-    line-height 1.25
-  a
-    text-decoration underline
+  margin-bottom 10px
 
 span.num
   display inline-block
@@ -114,19 +152,22 @@ body, table.body
   padding-bottom 40px
 
 .pad-bottom
-  padding-bottom 20px !important
+  padding-bottom 30px !important
 
 .email-header
   margin-bottom 4px
   td
     vertical-align bottom
 
-.header-logo
+.header-logo, .footer-logo
   text-align center
   a
     width 83%
     margin-top 16px
     display inline-block
+.footer-logo
+  a 
+    width 56%
 
 .header-date, .header-link
   vertical-align bottom
@@ -134,6 +175,26 @@ body, table.body
 
 .header-link
   text-align right
+
+.footer-contact 
+  vertical-align bottom
+  .caption
+    text-align left !important
+    margin-bottom 0
+    text-shadow none
+.footer-address 
+  vertical-align bottom
+  .caption
+    text-align right
+    margin-bottom 0
+    text-shadow none
+.footer-link
+  p
+    text-align center
+  a 
+    text-align center
+    color mTextLtBlue
+    text-decoration underline
 
 .columns td.title-container
     background-color white
@@ -159,23 +220,46 @@ img.signature
 .table-of-contents h2
   margin-top 24px
 
-td.stats-container
-  border 1px solid
-  border-radius 3px
-  padding 8px 0 !important
+td.stats-container.blue
   text-align center
   vertical-align middle
   margin-bottom 30px
-  &.blue
+  padding 0
+  table.eight
+    border 1px solid
+    border-radius 3px
+    padding 4px 0 !important
+    text-align center
+    vertical-align middle
     border-color mGreyBlue
-  &.orange
+    border-collapse: separate !important;
+
+td.stats-container.orange
+  text-align center
+  vertical-align middle
+  margin-bottom 30px
+  padding 0
+  .eleven
+    padding 0
+  .stats-cell
+    border 1px solid
+    border-radius 3px
+    padding 0 !important
     border-color mLtOrange
-    &:hover
-      transition all 0.2s ease
-      border-color mOrange
-      background-color mOrange
-      h2, .stats-desc
-        color white
+    border-collapse: separate !important;
+    width 100% !important
+    a
+      display block
+      padding 9px 0 !important
+      &:hover
+        transition all 0.2s ease
+        border-color mOrange
+        background-color mOrange
+        *
+          color white
+    td
+      text-align center
+      padding 0
 
 
 td.stats-cell
@@ -217,9 +301,23 @@ td.stats-cell
     height 60px !important
     float none
     
-  td.stats-container
+  .header-link
+    text-align right
+  
+  table[class='body'] img.social-icon
+    width 48px !important
+    height 48px !important
+    margin 0 auto
+
+  td.stats-container.blue
     margin-bottom 4px
-    &.blue
-      margin-top 6px
-      border-radius 0
-      border-width 1px 0 0 0
+    margin-top 6px
+    border-radius 0
+    border-width 1px 0 0 0
+
+  td.stats-container.orange
+    td.one
+      width 0 !important
+      padding 0 !important
+    td.eleven
+      width 100% !important
