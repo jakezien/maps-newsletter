@@ -93,8 +93,8 @@ mixin donationStats(cost, raised, needed)
         span.stats-amount= '$' + cost
         span.stats-desc estimated study cost
       td.four.sub-columns.stats-cell
-        span.stats-amount= '$' + raised
-        span.stats-desc raised to date
+        span.stats-amount.middle-border= '$' + raised
+        span.stats-desc.middle-border raised to date
       td.four.sub-columns.stats-cell.last
         span.stats-amount= '$' + needed
         span.stats-desc still needed

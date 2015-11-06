@@ -1,58 +1,76 @@
 // —————————— FOOTER —————————— 
-+fullWidthRow('footer email-footer pad-bottom')
-  +row('pad-bottom')
-    td.four.sub-columns.footer-contact 
-      p.caption
-        a(href='http://www.maps.org') www.maps.org
-        br
-        a(href='tel:18314296362') tel:  +1 831 429 MDMA
-        br
-        | fax: +1 831 429 6370
-    td.four.sub-columns.footer-logo.center
-      a(href='http://www.maps.org')
-        img(src='img/maps-footer.gif' class='center')
-    td.four.sub-columns.footer-address.last
-      p.caption 1115 Mission Street#[br]Santa Cruz, CA, USA#[br]95060-9989
 
++fullWidthRow('footer email-footer pad-bottom hide-for-small')
+  td.four.sub-columns.footer-contact 
+    p.caption
+      a(href='http://www.maps.org') www.maps.org
+      br
+      a(href='tel:18314296362') tel:  +1 831 429 MDMA
+      br
+      | fax: +1 831 429 6370
+  td.four.sub-columns.footer-logo.center
+    a(href='http://www.maps.org')
+      img(src='img/maps-footer.gif' class='center' alt='MAPS logo')
+  td.four.sub-columns.footer-address.last
+    p.caption 1115 Mission Street#[br]Santa Cruz, CA, USA#[br]95060-9989
+
++fullWidthRow('footer email-footer pad-bottom show-for-small')
+  td.center.footer-logo
+    a(href='http://www.maps.org')
+      img(src='img/maps-footer.gif' class='center' width='60%' alt='MAPS logo')
+
++fullWidthRow('footer email-footer pad-bottom show-for-small')
+  td.center.footer-contact
+    p.caption
+      a(href='http://www.maps.org') www.maps.org
+      br
+      a(href='tel:18314296362') tel:  +1 831 429 MDMA
+      br
+      | fax: +1 831 429 6370
+    p.caption 1115 Mission Street#[br]Santa Cruz, CA, USA#[br]95060-9989
+
+
++container()
   +fullWidthRow()
-    +fullWidthRow()
-      td.full-width: hr
-    +fullWidthRow()
-      +columns('six', 'social-container')
-        td.sub-columns.three.twitter
-          a(href='http://www.twitter.com/mapsnews')
-            img(src='img/twitter.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.facebook
-          a(href='http://www.facebook.com/mapsmdma')
-            img(src='img/facebook.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.instagram
-          a(href='http://www.instagram.com/mapsnews')
-            img(src='img/instagram.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.last.youtube
-          a(href='http://www.youtube.com/mapsmdma')
-            img(src='img/youtube.gif' width='48px' height='48px' class='social-icon')
-      +columns('six', 'last')
-        td.sub-columns.three.reddit
-          a(href='http://www.reddit.com/user/MAPSPsychedelic/')
-            img(src='img/reddit.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.pinterest
-          a(href='http://www.pinterest.com/mapsnews')
-            img(src='img/pinterest.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.tumblr
-          a(href='http://mapsnews.tumblr.com/')
-            img(src='img/tumblr.gif' width='48px' height='48px' class='social-icon')
-        td.sub-columns.three.last.google-plus
-          a(href='http://plus.google.com/u/0/114671001319740333157/')
-            img(src='img/google-plus.gif' width='48px' height='48px' class='social-icon')
-    +fullWidthRow()
-      td.full-width: hr
+    td.full-width: hr
+  +fullWidthRow()
+    +columns('six', 'social-container')
+      td.three.sub-columns.center.twitter
+        a(href='http://www.twitter.com/mapsnews')
+          img(src='img/twitter@2x.gif' width='48px' height='48px' class='social-icon center' alt='Twitter')
+      td.three.sub-columns.center.facebook
+        a(href='http://www.facebook.com/mapsmdma')
+          img(src='img/facebook@2x.gif' width='48px' height='48px' class='social-icon center' alt='Facebook')
+      td.three.sub-columns.center.instagram
+        a(href='http://www.instagram.com/mapsnews')
+          img(src='img/instagram@2x.gif' width='48px' height='48px' class='social-icon center' alt='Instagram')
+      td.three.sub-columns.center.youtube.last
+        a(href='http://www.youtube.com/mapsmdma')
+          img(src='img/youtube@2x.gif' width='48px' height='48px' class='social-icon center' alt='YouTube')
+    +columns('six', 'last')
+      td.three.sub-columns.center.reddit
+        a(href='http://www.reddit.com/user/MAPSPsychedelic/')
+          img(src='img/reddit@2x.gif' width='48px' height='48px' class='social-icon center' alt='Reddit')
+      td.three.sub-columns.center.pinterest
+        a(href='http://www.pinterest.com/mapsnews')
+          img(src='img/pinterest@2x.gif' width='48px' height='48px' class='social-icon center' alt='Pinterest')
+      td.three.sub-columns.center.tumblr
+        a(href='http://mapsnews.tumblr.com/')
+          img(src='img/tumblr@2x.gif' width='48px' height='48px' class='social-icon center' alt='Tumblr')
+      td.three.sub-columns.center.google-plus.last
+        a(href='http://plus.google.com/u/0/114671001319740333157/')
+          img(src='img/google-plus@2x.gif' width='48px' height='48px' class='social-icon center' alt='Google Plus')
+  +fullWidthRow()
+    td.full-width: hr
 
-  +fullWidthRow('pad-bottom')
-    td.sub-columns.three.footer-link
++fullWidthRow('pad-bottom')
+  +columns('six')
+    td.sub-columns.six.footer-link
       p: a(href='http://www.maps.org') Unsubscribe
-    td.sub-columns.three.footer-link
+    td.sub-columns.six.footer-link.last
       p: a(href='http://www.maps.org') Share this Newsletter
-    td.sub-columns.three.footer-link
+  +columns('six')
+    td.sub-columns.six.footer-link
       p: a(href='http://www.maps.org') About MAPS
-    td.sub-columns.three.footer-link.last
+    td.sub-columns.six.footer-link.last
       p: a(href='http://www.maps.org') Donate
