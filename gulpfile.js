@@ -19,10 +19,8 @@ var minifyHtml = require('gulp-minify-html');
 // Dev tasks
 gulp.task('browserSync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./prod",
-            port: 9000
-        }
+        server: { baseDir: "./prod" },
+        port: 9000
     });
 });
 

@@ -71,6 +71,19 @@ ul, li
 li
   margin-bottom 8px
 
+.media 
+  li
+    list-style none
+  h3, p
+    margin-bottom 6px
+  a 
+    color mTextLtBlue !important
+    text-decoration underline !important
+  .caption
+    text-align left
+    text-shadow none
+    color mDkGreyBlue
+
 hr.bold
   width 200px
   height 4px
@@ -101,21 +114,23 @@ table[class='body'] table.columns td.width-auto
 .interstitial 
   padding 16px 0
   text-align center
+  hr
+    margin 16px 0
   p
-    text-align center
-    font-size 16px
-    color mTextLtBlue
-    text-shadow 0 1px 0 mLtGreyBlue
-    line-height 1.5
+    text-align center !important
+    font-size 16px !important
+    color mTextLtBlue !important
+    text-shadow 0 1px 0 mLtGreyBlue !important
+    line-height 1.5 !important
   a
-    text-decoration underline
+    text-decoration underline !important
 
 .white .interstitial p, 
 .white p.interstitial
-  color mBlueOld
-  text-shadow none
+  color mBlueOld !important
+  text-shadow none !important
   a
-    color mBlueOld
+    color mBlueOld !important
 
 
 .interstitial-image img
@@ -236,6 +251,12 @@ td.stats-container.blue
     vertical-align middle
     border-color mGreyBlue
     border-collapse: separate !important;
+    td
+      padding-bottom 0
+  .block-grid td
+    vertical-align middle
+    text-align center
+    padding 7px 0 !important
 
 td.stats-container.orange
   text-align center

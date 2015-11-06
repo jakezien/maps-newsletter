@@ -1,0 +1,37 @@
+// —————————— MEDIA —————————— 
++container()(class='white support')
+  +basicColumn()
+    h1 Media
+    hr.bold
+  +basicColumn()
+    h2 Newsweek, reddit, Huffington Post, Festival Insights, and more...
+    +row()
+      +columns('seven')
+        td
+          ul.media-container
+            +mediaMention('reddit',
+                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
+                          'http://www.reddit.com/',
+                          'Zendo Project',
+                          'July 15, 2015')
+            +mediaMention('reddit',
+                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
+                          'http://www.reddit.com/',
+                          'Zendo Project',
+                          'July 15, 2015')
+            +mediaMention('reddit',
+                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
+                          'http://www.reddit.com/',
+                          'Zendo Project',
+                          'July 15, 2015')
+            +mediaMention('reddit',
+                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
+                          'http://www.reddit.com/',
+                          'Zendo Project',
+                          'July 15, 2015')
+
+      +columns('four')
+        td
+          img(src='http://placehold.it/210x500')
+
+    +interstitialText('Explore <a href="http://www.maps.org/donate">MAPS In the Media</a> for more psychedelic and medical marijuana research news.')

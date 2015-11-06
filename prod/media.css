@@ -190,3 +190,13 @@
     line-height: 2 !important;
   }
 }
+.middle-border {
+  border-left: 0;
+  border-right: 0;
+}
+.media-container {
+  padding-left: 0;
+}
+.media-container li {
+  list-style: none;
+}

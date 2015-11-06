@@ -21,18 +21,10 @@
             li Google Matching Gift ($2,723)
             li Anonymous ($1,500)
 
-      +columns('four last sidebar')
-        td
-          +row('center')
-            td.center
-              img(src='http://maps.org/news-letters/v25n2/v25n2_frontcover.png' class='sidebar center')
-          +row()
-            td
-              p.caption Watch the video to learn about MDMA biomarker research being conducted at Stanford University.
-              hr.bold
+      +sidebarImg( 'http://maps.org/news-letters/v25n2/v25n2_frontcover.png', 'Watch the video to learn about MDMA biomarker research being conducted at Stanford University.' )
+
     +row()
       td
         p Also, a warm thank you to all those who gave to our Zendo Project crowdfunding campaign on Indiegogo. We especially recognize Dr. Bronner's Magic Soaps, Britt Selvitelle, and two $10,000 anonymous donations, one a matching gift and one not processed through Indiegogo. <a href="http://www.maps.org/donate">maps.org/donate</a>
-    +row(class='pad-bottom')
-      td.interstitial
-        p.callout Learn about <a href="http://www.maps.org/donate">including MAPS in your will or trust.</a>
+
+    +interstitialText('Learn about <a href="http://www.maps.org/donate">including MAPS in your will or trust.</a>')

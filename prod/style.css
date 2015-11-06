@@ -81,6 +81,22 @@ li {
 li {
   margin-bottom: 8px;
 }
+.media li {
+  list-style: none;
+}
+.media h3,
+.media p {
+  margin-bottom: 6px;
+}
+.media a {
+  color: #546982 !important;
+  text-decoration: underline !important;
+}
+.media .caption {
+  text-align: left;
+  text-shadow: none;
+  color: #9da5b3;
+}
 hr.bold {
   width: 200px;
   height: 4px;
@@ -113,24 +129,27 @@ p.caption {
   padding: 16px 0;
   text-align: center;
 }
+.interstitial hr {
+  margin: 16px 0;
+}
 .interstitial p {
-  text-align: center;
-  font-size: 16px;
-  color: #546982;
-  text-shadow: 0 1px 0 #e3e9fd;
-  line-height: 1.5;
+  text-align: center !important;
+  font-size: 16px !important;
+  color: #546982 !important;
+  text-shadow: 0 1px 0 #e3e9fd !important;
+  line-height: 1.5 !important;
 }
 .interstitial a {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 .white .interstitial p,
 .white p.interstitial {
-  color: #6a92c9;
-  text-shadow: none;
+  color: #6a92c9 !important;
+  text-shadow: none !important;
 }
 .white .interstitial p a,
 .white p.interstitial a {
-  color: #6a92c9;
+  color: #6a92c9 !important;
 }
 .interstitial-image img {
   border: 4px solid #fff;
@@ -263,6 +282,14 @@ td.stats-container.blue table.eight {
   vertical-align: middle;
   border-color: #d1d5de;
   border-collapse: separate !important;
+}
+td.stats-container.blue table.eight td {
+  padding-bottom: 0;
+}
+td.stats-container.blue .block-grid td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 7px 0 !important;
 }
 td.stats-container.orange {
   text-align: center;
