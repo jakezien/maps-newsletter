@@ -1,10 +1,9 @@
+= '\n'
 // —————————— INTERSTITIAL IMAGE —————————— 
-+container()
-  +row()(class='interstitial-image')
-    +columns('twelve', 'last')
-      td(class='center')
-        img(class="center" src="http://www.maps.org/images/rachel-hope-aljazeera.jpg", width='auto', height='280px')
-  +fullWidthRow('center')
-    +columns('seven')
-      td(class='caption center')
-        p MDMA-assisted psychotherapy study participant Rachel Hope is featured in a new report on Al Jazeera America's TechKnow. The episode aired on October 10, 2015.<br/><a href="http://www.maps.org/maps-media/media/5832-al-jazeera-america-rebooting-psychedelic-science">Read the article.
++basicWrapper('no-bg')
+  tr
+    img(class="imgClass" src="http://www.maps.org/images/rachel-hope-aljazeera.jpg", width='auto', height='280px')
+    
+  tr
+    +gridHalf('caption center')
+      p MDMA-assisted psychotherapy study participant Rachel Hope is featured in a new report on Al Jazeera America's TechKnow. The episode aired on October 10, 2015.<br/><a href="http://www.maps.org/maps-media/media/5832-al-jazeera-america-rebooting-psychedelic-science">Read the article.

@@ -18,6 +18,10 @@ font-family-serif = Georgia, serif
 
 // Styles
 
+body, table.body
+  background mGreyBlue
+  color mTextBlue
+
 h1
   font-family font-family-sans
   font-size 24px
@@ -27,7 +31,7 @@ h1
   color mDkBlue
   margin-top 24px
   margin-bottom 24px
-  
+
 h2
   font-family font-family-sans
   font-size 18px
@@ -36,7 +40,7 @@ h2
   color mBlue
   margin-top 8px
   margin-bottom 8px
-  
+
 h3
   font-family font-family-sans
   font-size 16px
@@ -45,7 +49,7 @@ h3
   color mBlue
   margin-top 20px
   margin-bottom 8px
-  
+
 p, li
   font-family font-family-serif
   font-size 16px
@@ -53,7 +57,7 @@ p, li
   line-height 24px
   &.margin-zero
     margin 0
-  
+
 a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
   text-decoration none
   color mBlue
@@ -63,20 +67,49 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
   &:visited
     color mBlue
 
-
-    
 ul, li
   margin 0
   padding 0
 li
   margin-bottom 8px
 
-.media 
+
+hr
+  width 100%
+  height 1px
+  background-color mDkGreyBlue
+  margin 0
+
+hr.bold
+  width 200px
+  height 4px
+  background-color mDkBlue
+  margin 28px auto 0 0
+
+.wrapper
+  background white
+  &.no-bg
+    background mGreyBlue
+
+.sectionBreak
+  height 20px
+  background mGreyBlue
+
+
+
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+
+
+.media
   li
     list-style none
   h3, p
     margin-bottom 6px
-  a 
+  a
     color mTextLtBlue !important
     text-decoration underline !important
   .caption
@@ -84,17 +117,6 @@ li
     text-shadow none
     color mDkGreyBlue
 
-hr.bold
-  width 200px
-  height 4px
-  background-color mDkBlue
-  margin 28px auto 0 0
-hr
-  width 100%
-  height 1px
-  background-color mDkGreyBlue
-  margin 0
-  
 .full-width
   width 100% !important
 
@@ -102,7 +124,7 @@ hr
 table[class='body'] table.column td.width-auto,
 table[class='body'] table.columns td.width-auto
   width auto !important
-  
+
 .caption p, p.caption
   font-family font-family-sans
   font-size 12px
@@ -111,7 +133,7 @@ table[class='body'] table.columns td.width-auto
   text-align center
   line-height 18px
 
-.interstitial 
+.interstitial
   padding 16px 0
   text-align center
   hr
@@ -125,7 +147,7 @@ table[class='body'] table.columns td.width-auto
   a
     text-decoration underline !important
 
-.white .interstitial p, 
+.white .interstitial p,
 .white p.interstitial
   color mBlueOld !important
   text-shadow none !important
@@ -136,10 +158,10 @@ table[class='body'] table.columns td.width-auto
 .interstitial-image img
   border 4px solid white
   box-sizing border-box;
-  
+
   .caption p
     text-align center
-    
+
 .interstitial-text
   padding 10px 0
   margin-bottom 10px
@@ -160,7 +182,7 @@ span.num
   position relative
   top -1px
   left -1px
-  
+
 body, table.body
   background mGreyBlue
   color mTextBlue
@@ -195,13 +217,13 @@ body, table.body
 .header-link
   text-align right
 
-.footer-contact 
+.footer-contact
   vertical-align bottom
   .caption
     text-align left !important
     margin-bottom 0
     text-shadow none
-.footer-address 
+.footer-address
   vertical-align bottom
   .caption
     text-align right
@@ -210,7 +232,7 @@ body, table.body
 .footer-link
   p
     text-align center
-  a 
+  a
     text-align center
     color mXdkGreyBlue
 
@@ -230,7 +252,7 @@ body, table.body
 
 table.title-container-table
   margin-bottom -80px
-  
+
 img.signature
   height 60px
   float none
@@ -291,7 +313,7 @@ td.stats-cell
   padding 6px !important
 
 .stats-amount
-  font-family font-family-serif    
+  font-family font-family-serif
   font-size 18px
   color mBlueOld
   display block

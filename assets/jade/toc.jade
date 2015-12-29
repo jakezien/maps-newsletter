@@ -1,21 +1,34 @@
+= '\n'
 // —————————— TABLE OF CONTENTS —————————— 
-+container()(class='white table-of-contents')
-  +basicColumn()
-    h1 Contents
-    hr.bold
-  +basicColumn(true)
-    h2 Treating PTSD with MDMA-Assisted Psychotherapy
-    +tocItem(1, 'Veterans: Last Subject Receives Final Experimental Session')
-    +tocItem(2, 'Boulder: Subject 19 Receives First Experimental Treatment')
-    +tocItem(3, 'Israel: Fifth Subject Treated, Three More Enrolled')
++basicWrapper()(class='white table-of-contents')
+  tr
+    +gridWhole()
+      h1 Contents
+      hr.bold
+  
+  tr
+    +gridWhole()
+      h2 Treating PTSD with MDMA-Assisted Psychotherapy
+  
+  tr
+    +gridWhole()
+      +tocItem(1, 'Veterans: Last Subject Receives Final Experimental Session')
+  tr
+    +gridWhole()
+      +tocItem(2, 'Boulder: Subject 19 Receives First Experimental Treatment')
+  tr
+    +gridWhole()
+      +tocItem(3, 'Israel: Fifth Subject Treated, Three More Enrolled')
 
-    h2 MDMA-Assisted Therapy for Social  Anxiety in Autistic Adults
-    +tocItem(4, 'Veterans: Last Subject Receives Final Experimental Session')
-    +tocItem(5, 'Boulder: Subject 19 Receives First Experimental Treatment')
-    +tocItem(6, 'Israel: Fifth Subject Treated, Three More Enrolled')
-    
-    h2 Psychedelic Harm Reduction
-    +tocItem(7, 'Veterans: Last Subject Receives Final Experimental Session')
-    +tocItem(8, 'Boulder: Subject 19 Receives First Experimental Treatment')
-    +tocItem(9, 'Israel: Fifth Subject Treated, Three More Enrolled')
-    +tocItem(10, 'Veterans: Last Subject Receives Final Experimental Session')
+  //-   h2 MDMA-Assisted Therapy for Social  Anxiety in Autistic Adults
+  //-   +tocItem(4, 'Veterans: Last Subject Receives Final Experimental Session')
+  //-   +tocItem(5, 'Boulder: Subject 19 Receives First Experimental Treatment')
+  //-   +tocItem(6, 'Israel: Fifth Subject Treated, Three More Enrolled')
+  //-   
+  //-   h2 Psychedelic Harm Reduction
+  //-   +tocItem(7, 'Veterans: Last Subject Receives Final Experimental Session')
+  //-   +tocItem(8, 'Boulder: Subject 19 Receives First Experimental Treatment')
+  //-   +tocItem(9, 'Israel: Fifth Subject Treated, Three More Enrolled')
+  //-   +tocItem(10, 'Veterans: Last Subject Receives Final Experimental Session')
+
++sectionBreak()

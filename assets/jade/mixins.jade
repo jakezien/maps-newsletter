@@ -1,76 +1,46 @@
-//- From https://github.com/memeticlabs/jink#documentation
-
-mixin container(tdClasses)
-  table.container(class!=attributes.class)
+mixin basicWrapper(classes)
+  table.wrapper(width='640', cellpadding='0', cellspacing='0', border='0', class=('basic-td' + classes ? classes : ''))
     tr
-      td(class=(tdClasses ? tdClasses : ''))
-        if block
-          block
-
-mixin row()
-  table.row(class!=attributes.class)
+      td(height='10', style='font-size:10px; line-height:10px;')  
+      // Spacer
     tr
-      if block
-        block
+      td(align='center')
+        table.container(width='600', cellpadding='0', cellspacing='0', border='0')
+          if block
+            block
+          
+mixin gridWhole(classes)
+  td.mobile(width='600', class=('basic-td' + classes ? classes : ''))
+    if block
+      block
 
-//- the columns mixin takes in the 
-//- the number of columns and 
-//- the name of the classes(space separated)
-//- to be applied on the `wrapper` of the column
-mixin columns(number, wrapperClasses, columnClasses)
-  - var wrapperClasses = wrapperClasses ? wrapperClasses : ''
-  - var columnClass = number + (attributes.visibility ? ' ' + attributes.visibility: '') + ' columns' + (columnClasses ? ' ' + columnClasses : '')
-
-  td.wrapper(class=wrapperClasses)
-    - if (attributes.visibility === "show-for-small")
-      // [if !mso]><!-- 
-    table(class!= columnClass)
-      tr
-        if block
-          block
-        td.expander
-    - if (attributes.visibility === "show-for-small")
-      // <![endif]
-
-mixin column(number, wrapperClasses, columnClasses)
-  - var wrapperClasses = wrapperClasses ? wrapperClasses : ''
-  - var columnClass = number + (attributes.visibility ? ' ' + attributes.visibility: '') + ' column' + (columnClasses ? ' ' +columnClasses : '')
-
-  td.wrapper(class=wrapperClasses)
-    - if (attributes.visibility === "show-for-small")
-      // [if !mso]><!-- 
-    table(class!= columnClass)
-      tr
-        if block
-          block
-        td.expander
-    - if (attributes.visibility === "show-for-small")
-      // <![endif]
-
-mixin fullWidthRow(rowClasses)
-  +row()(class=rowClasses)
-    td.center(align="center")
-      center
-        +container
-          +columns('twelve', 'last') 
-            if block
-              block
-            td.expander
-
-mixin blockGrid(number)
-  - var grid = "block-grid " + number + '-up'
-    table(class=grid)
-      tr
-        if block
-          block
-
-
-mixin button(label)
-  table.button(class!=(attributes.style ? attributes.style : ''))
-    tr
-      td
-        a= label
-
+mixin gridHalf(classes)
+  td.mobile(width='300', class=('basic-td' + classes ? classes : ''))
+    if block
+      block
+    
+mixin gridThird(classes)
+  td.mobile(width='200', class=('basic-td' + classes ? classes : ''))
+    if block
+      block
+    
+mixin gridFourth(classes)
+  td.mobile(width='150', class=('basic-td' + classes ? classes : ''))
+    if block
+      block
+    
+mixin gridFifth(classes)
+  td.mobile(width='120', class=('basic-td' + classes ? classes : ''))
+    if block
+      block
+      
+mixin gridCustom(width, classes)
+  td.mobile(width=width, class=('basic-td' + classes ? classes : ''))
+    if block
+      block
+      
+mixin sectionBreak()
+  table(class='sectionBreak')
 
 mixin tocItem(number, title)
   table: tr
@@ -78,44 +48,6 @@ mixin tocItem(number, title)
       span(class='num')= number
     td
       p(class='margin-zero')= title
-
-mixin basicColumn(padBottom, rowClasses)
-  +row(class=(rowClasses ? rowClasses : ''))
-    +columns('eleven', 'last offset-by-half')
-      td(class=(padBottom ? 'text-pad pad-bottom' : 'text-pad'))
-        if block
-          block
-
-mixin donationStats(cost, raised, needed)
-  +row()
-    +columns('eight', 'stats-container blue')
-      td
-        table.block-grid.four-up.stats-cell
-          tr
-            td
-              span.stats-amount= '$' + cost
-              span.stats-desc estimated study cost
-            td
-              span.stats-amount.middle-border= '$' + raised
-              span.stats-desc.middle-border raised to date
-            td
-              span.stats-amount= '$' + needed
-              span.stats-desc still needed
-    +columns('three', 'stats-container orange')
-      td.one.sub-column
-      td.eleven.sub-columns
-        table.stats-cell: tr: td
-          a.stats-donate-button(href='http://www.maps.org/donate')
-            h2 Donate Now
-            span.stats-desc help fund this study
-
-mixin sidebarImg(imgUrl, captionText)
-  +columns('four', 'last', 'sidebar center')
-    td
-      hr
-      img(src= imgUrl class='center')
-      p.caption= captionText
-      hr
 
 mixin interstitialText(text)
   +row(class='pad-bottom')

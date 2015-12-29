@@ -4,14 +4,8 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
 
-var insertLines = require('gulp-insert-lines');
-var insertFile = require('gulp-file-insert');
-
 var inlineSource = require('gulp-inline-source');
 var inlineCss = require('gulp-inline-css');
-var mcInlineCss = require('gulp-mc-inline-css');
-var juice = require('gulp-juice');
-var premailer = require('gulp-premailer');
 
 var minifyHtml = require('gulp-minify-html');
 
@@ -30,7 +24,7 @@ gulp.task('dev-css', function() {
     // .pipe(autoprefixer())
     .pipe(gulp.dest('prod'))
     .pipe(browserSync.stream());
-  gulp.src('assets/css/ink.css', {base: 'assets/css/'})
+  gulp.src('assets/css/mailframework.css', {base: 'assets/css/'})
     .pipe(gulp.dest('prod'));
 });
 
@@ -38,10 +32,10 @@ gulp.task('dev-img', function() {
   gulp.src('assets/img/*', {base: 'assets/'})
     .pipe(gulp.dest('prod'));
 });
- 
+
 gulp.task('dev-jade', function() {
   var locals = {};
- 
+
   gulp.src('./index.jade')
     .pipe(jade({
       locals: locals,
