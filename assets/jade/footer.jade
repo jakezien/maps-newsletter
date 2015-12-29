@@ -63,14 +63,17 @@
   +fullWidthRow()
     td.full-width: hr
 
-+fullWidthRow('pad-bottom')
-  +columns('six')
-    td.sub-columns.six.footer-link
-      p: a(href='http://www.maps.org') Unsubscribe
-    td.sub-columns.six.footer-link.last
-      p: a(href='http://www.maps.org') Share this Newsletter
-  +columns('six')
-    td.sub-columns.six.footer-link
++row()
+  +columns('twelve')
+    td.sub-columns.four.footer-link
+      p: a(href='http://www.maps.org') Share
+    td.sub-columns.four.footer-link
       p: a(href='http://www.maps.org') About MAPS
+    td.sub-columns.four.footer-link.last
+      p: a(href='http://www.maps.org') Donate 
++row('pad-bottom')
+  +columns('twelve')
+    td.sub-columns.six.footer-link
+      p: a(href='http://www.maps.org') Update subscription preferences
     td.sub-columns.six.footer-link.last
-      p: a(href='http://www.maps.org') Donate
+      p: a(href='http://www.maps.org') Unsubscribe from all MAPS&nbsp;updates
