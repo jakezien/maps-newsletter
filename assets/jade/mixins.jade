@@ -1,14 +1,19 @@
 mixin basicWrapper(classes)
   table.wrapper(width='640', cellpadding='0', cellspacing='0', border='0', class=('basic-td' + classes ? classes : ''))
     tr
-      td(height='10', style='font-size:10px; line-height:10px;')  
-      // Spacer
-    tr
-      td(align='center')
+      td(align='center' class='pad-bottom')
         table.container(width='600', cellpadding='0', cellspacing='0', border='0')
           if block
             block
-          
+
+mixin whiteCard(title, classes)
+  +basicWrapper('white ' + classes)
+    +gridWhole()
+      h1= title
+      hr.bold
+    if block
+      block
+
 mixin gridWhole(classes)
   td.mobile(width='600', class=('basic-td' + classes ? classes : ''))
     if block
@@ -61,3 +66,26 @@ mixin mediaMention(source, title, url, author, date)
     h3= source
     p: a(href= url)= title
     p.caption= author + ' | ' + date
+
+mixin introLetterSignoff(signoffText)
+  br
+  p= signoffText + ','
+  img.signature.imgClass(src='img/brad_sig.gif' alt='Brad Burge signature')
+  p: i Brad Burge#[br]Maps Director of Communications#[br]and Marketing
+
+
+mixin donationStats(cost, raised, needed)
+  td: table.donationStats: tr
+    +gridFourth()
+      span.stats-amount= '$' + cost
+      span.stats-desc estimated study cost
+    +gridFourth()
+      span.stats-amount.middle-border= '$' + raised
+      span.stats-desc.middle-border raised to date
+    +gridFourth()
+      span.stats-amount= '$' + needed
+      span.stats-desc still needed
+    +gridFourth.orange
+      a.stats-donate-button(href='http://www.maps.org/donate')
+        h2 Donate Now
+        span.stats-desc help fund this study

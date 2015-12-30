@@ -108,6 +108,26 @@ hr.bold {
   height: 20px;
   background: #d1d5de;
 }
+.imgClass.floatLeft {
+  float: right;
+  margin: 4px;
+}
+.imgClass.floatRight {
+  float: right;
+  margin: 4px;
+}
+.title-container {
+  margin-bottom: 40px;
+}
+.pad-bottom {
+  padding-bottom: 20px !important;
+}
+.donationStats {
+  text-align: center !important;
+}
+.donationStats td {
+  margin: 10px 0;
+}
 .media li {
   list-style: none;
 }
@@ -203,12 +223,6 @@ table.body {
   background-color: #fff;
   margin-bottom: 20px;
   padding-bottom: 40px;
-}
-.pad-bottom {
-  padding-bottom: 30px !important;
-}
-.email-header {
-  margin-bottom: 4px;
 }
 .email-header td {
   vertical-align: bottom;
