@@ -1,6 +1,6 @@
-.ReadMsgBody { width: 100%; background-color: #F6F6F6; }
-.ExternalClass { width: 100%; background-color: #F6F6F6; }
-body { width: 100%; background-color: #f6f6f6; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; font-family: Arial, Times, serif }
+.ReadMsgBody { width: 100%; background-color: #D1D5DE; }
+.ExternalClass { width: 100%; background-color: #D1D5DE; }
+body { width: 100%; background-color: #D1D5DE; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; font-family: Arial, Times, serif }
 table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 
 @-ms-viewport{ width: device-width; }

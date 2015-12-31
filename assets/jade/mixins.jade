@@ -1,5 +1,5 @@
 mixin basicWrapper(classes)
-  table.wrapper(width='640', cellpadding='0', cellspacing='0', border='0', class=('basic-td' + classes ? classes : ''))
+  table(width='640', cellpadding='0', cellspacing='0', border='0', class='basic-td wrapper ' + classes)
     tr
       td(align='center' class='pad-bottom')
         table.container(width='600', cellpadding='0', cellspacing='0', border='0')
@@ -7,13 +7,14 @@ mixin basicWrapper(classes)
             block
 
 mixin whiteCard(title, classes)
-  +basicWrapper('white ' + classes)
+  +basicWrapper('white ' + (typeof classes !== 'undefined' ? classes : ''))
     +gridWhole()
       h1= title
       hr.bold
     if block
       block
-
+  +sectionBreak()
+    
 mixin gridWhole(classes)
   td.mobile(width='600', class=('basic-td' + classes ? classes : ''))
     if block
@@ -47,6 +48,13 @@ mixin gridCustom(width, classes)
 mixin sectionBreak()
   table(class='sectionBreak')
 
+mixin tocSection(title, items)
+  tr
+    +gridWhole
+      h2= title
+  each item in items
+    tr: +gridWhole(): + tocItem(++itemCount, item)
+
 mixin tocItem(number, title)
   table: tr
     td(class='width-auto')
@@ -73,7 +81,19 @@ mixin introLetterSignoff(signoffText)
   img.signature.imgClass(src='img/brad_sig.gif' alt='Brad Burge signature')
   p: i Brad Burge#[br]Maps Director of Communications#[br]and Marketing
 
+mixin asideRight(imgSrc, captionText)
+  +aside(imgSrc, captionText)
 
+mixin asideLeft(imgSrc, captionText,)
+  +aside(imgSrc, captionText, true)
+
+mixin aside(imgSrc, captionText, leftSide)
+  table(class= (leftSide ? 'floatLeft' : 'floatRight'))
+    tr
+      +gridFourth()
+        img.imgClass(src=imgSrc, height='280')
+        p.caption= captionText
+      
 mixin donationStats(cost, raised, needed)
   td: table.donationStats: tr
     +gridFourth()

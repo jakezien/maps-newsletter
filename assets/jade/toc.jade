@@ -1,29 +1,46 @@
 = '\n'
+- var itemCount = 0;
 // —————————— TABLE OF CONTENTS —————————— 
 +whiteCard('Contents', 'table-of-contents')
-  tr
-    +gridWhole()
-      h2 Treating PTSD with MDMA-Assisted Psychotherapy
+  +tocSection('Treating PTSD with MDMA-Assisted Psychotherapy', [
+    'Boulder: Last Subject Receives Final Experimental Treatment',
+    'Therapist Training: Three Participants Receive MDMA-Assisted Psychotherapy	',
+    'Israel: Ninth Subject Enrolled',
+    'U.S. Veterans: 20 of 24 Participants Complete Long-Term Follow-Up'
+  ])
   
-  tr
-    +gridWhole()
-      +tocItem(1, 'Veterans: Last Subject Receives Final Experimental Session')
-  tr
-    +gridWhole()
-      +tocItem(2, 'Boulder: Subject 19 Receives First Experimental Treatment')
-  tr
-    +gridWhole()
-      +tocItem(3, 'Israel: Fifth Subject Treated, Three More Enrolled')
+  +tocSection('MDMA-Assisted Psychotherapy for Anxiety Associated with Life-Threatening Illness', [
+    'Marin: Sixth Subject Enrolled and Treated'
+  ])
 
-  //-   h2 MDMA-Assisted Therapy for Social  Anxiety in Autistic Adults
-  //-   +tocItem(4, 'Veterans: Last Subject Receives Final Experimental Session')
-  //-   +tocItem(5, 'Boulder: Subject 19 Receives First Experimental Treatment')
-  //-   +tocItem(6, 'Israel: Fifth Subject Treated, Three More Enrolled')
-  //-   
-  //-   h2 Psychedelic Harm Reduction
-  //-   +tocItem(7, 'Veterans: Last Subject Receives Final Experimental Session')
-  //-   +tocItem(8, 'Boulder: Subject 19 Receives First Experimental Treatment')
-  //-   +tocItem(9, 'Israel: Fifth Subject Treated, Three More Enrolled')
-  //-   +tocItem(10, 'Veterans: Last Subject Receives Final Experimental Session')
+  +tocSection('MDMA-Assisted Therapy for Social Anxiety in Autistic Adults', [
+    'Social Anxiety in Autistic Adults: Tenth Participant Treated, 11th Enrolled'
+  ])
+  
+  +tocSection('Support MAPS', [
+    'November Giving Report: We Rely On Your Gifts to Achieve Our Mission'
+  ])
+  
+  +tocSection('Media', [
+  	'KQED, Salon, Rolling Stone, Blaire Magazine, and more...'
+  ])
+  
+  +tocSection('MAPS Store', [
+    '<i>To Fathom Hell or Soar Angelic</i> by Ben Sessa',
+    'Signed Light Portrait of Sasha and Ann Shulgin by Dean Chamberlain',
+  ])
 
-+sectionBreak()
+  +tocSection('Events', [
+    'Report: Catharsis on the Mall: A Vigil for Healing the Drug War',
+    'WEBINAR Psychedelic Science and Spirituality: How to Apply What We’re Learning to Your Life: Now through December 16, 2015',
+    'Ibogaine for the World Panel Discussion and Benefit Concert: December 12, 2015, Mill Valley, CA',
+    'Global Ibogaine Conference: March 14-16, 2016, Tepoztlán, Mexico',
+    'Psychedelic Science 2017: April 19-24, 2017, Oakland, CA'
+  ])
+  
+  +tocSection('More News', [
+    'Help the Women’s Visionary Congress Reclaim Women’s Wisdom',
+    'Brazilian Scientists Launch Crowdfunding Campaign for MDMA/PTSD Research',
+    'Drug Policy Alliance Hiring Novel Psychoactive Substances Fellow',
+    'Survey: Psychedelic Experiences Related to Death and Dying'
+  ])
