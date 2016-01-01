@@ -108,7 +108,7 @@ gulp.task('prod', ['prod-css', 'dev-img', 'dev-jade'], function() {
     .pipe(gulp.dest('./prod'));
   gulp.src('dev/index.html')
     .pipe(juice({ preserveMediaQueries: true }))
-    .pipe(htmlMin(htmlMinOpts))
+    // .pipe(htmlMin(htmlMinOpts))
     // .pipe(rename('index.packed.html'))
     .pipe(gulp.dest('./prod'))
     .pipe(browserSync.stream());

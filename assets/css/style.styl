@@ -12,7 +12,7 @@ mXdkGreyBlue = #868E9C
 mTextBlue   = #29333D
 mTextLtBlue = #546982
 
-font-family-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
+font-family-sans = "Helvetica Neue", sans-serif
 font-family-serif = Georgia, serif
 
 
@@ -38,7 +38,7 @@ h2
   font-weight bolder
   line-height 1.25
   color mBlue
-  margin-top 8px
+  margin-top 32px
   margin-bottom 8px
 
 h3
@@ -78,7 +78,8 @@ hr
   width 100%
   height 1px
   background-color mDkGreyBlue
-  margin 0
+  margin 16px 0
+  border none
 
 hr.bold
   width 200px
@@ -114,6 +115,38 @@ hr.bold
   td
     margin 10px 0
 
+.footer-header
+  text-align center
+  .floatLeft
+    text-align left
+  .floatRight
+    text-align right
+    
+.social-icon
+  text-align center
+
+.footer-link
+  text-align center
+  margin 0
+  
+.white, .white .container
+  margin-bottom 20px
+
+.no-margin-bottom
+  margin-bottom 0 !important
+  
+img.interstitial
+  border 4px solid white
+  box-sizing border-box
+    
+@media only screen and (max-width: 480px)
+  .footer-header
+    .floatLeft, .floatRight
+      text-align center
+      float none
+    
+    
+
 //————————————————————— OLD??? ——————————————————————
 //————————————————————— OLD??? ——————————————————————
 //————————————————————— OLD??? ——————————————————————
@@ -142,13 +175,16 @@ table[class='body'] table.column td.width-auto,
 table[class='body'] table.columns td.width-auto
   width auto !important
 
-.caption p, p.caption
+.caption p, p.caption, .caption a
   font-family font-family-sans
   font-size 12px
   color mTextLtBlue
   text-shadow 0 1px 0 mLtGreyBlue
   text-align center
   line-height 18px
+  
+.caption p.link
+  margin-top 0
 
 .interstitial
   padding 16px 0
@@ -163,6 +199,8 @@ table[class='body'] table.columns td.width-auto
     line-height 1.5 !important
   a
     text-decoration underline !important
+
+
 
 .white .interstitial p,
 .white p.interstitial
@@ -182,6 +220,10 @@ table[class='body'] table.columns td.width-auto
 .interstitial-text
   padding 10px 0
   margin-bottom 10px
+  
+.imgClass.small {
+  max-height: 100px !important
+}
 
 span.num
   display inline-block

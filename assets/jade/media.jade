@@ -1,37 +1,54 @@
+= '\n'
 // —————————— MEDIA —————————— 
-+container()(class='white support')
-  +basicColumn()
-    h1 Media
-    hr.bold
-  +basicColumn()
-    h2 Newsweek, reddit, Huffington Post, Festival Insights, and more...
-    +row()
-      +columns('seven')
-        td
-          ul.media-container
-            +mediaMention('reddit',
-                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
-                          'http://www.reddit.com/',
-                          'Zendo Project',
-                          'July 15, 2015')
-            +mediaMention('reddit',
-                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
-                          'http://www.reddit.com/',
-                          'Zendo Project',
-                          'July 15, 2015')
-            +mediaMention('reddit',
-                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
-                          'http://www.reddit.com/',
-                          'Zendo Project',
-                          'July 15, 2015')
-            +mediaMention('reddit',
-                          'We are the Zendo Project, a non-profit harm reduction service. Ask us anything!',
-                          'http://www.reddit.com/',
-                          'Zendo Project',
-                          'July 15, 2015')
-
-      +columns('four')
-        td
-          img(src='http://placehold.it/210x500')
-
-    +interstitialText('Explore <a href="http://www.maps.org/donate">MAPS In the Media</a> for more psychedelic and medical marijuana research news.')
++whiteCard('Media', 'media no-margin-bottom')
+  tr
+    +gridWhole()
+      h2 Newsweek, reddit, Huffington Post, Festival Insights, and more...
+      ul.media-container
+        +mediaItem('KQED',
+                      'Making Psychedelics Mainstream: Interview with Rick Doblin',
+                      'http://www.maps.org/news/media/5915-kqed-making-psychedelics-mainstream?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'April Dembosky',
+                      'November 30, 2015',
+                      'http://maps.org/images/kqed_logo.png')
+        +mediaItem('Blaire Magazine',
+                      'Psychedelic Therapy is Healing Mental Illness',
+                      'http://www.maps.org/news/media/5902-blaire-magazine-psychedelic-therapy-is-healing-mental-illness?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Sarah Long',
+                      'November 6, 2015',
+                      'http://www.maps.org/images/blairemagazinelogo.jpg')
+        +mediaItem('Salon',
+                      'Veterans Hope MDMA Can Cure Their PTSD',
+                      'http://www.maps.org/news/media/5896-salon-veterans-hope-mdma-can-cure-their-ptsd?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Christine Jun',
+                      'November 11, 2015',
+                      'http://www.maps.org/images/Salon_website_logo.png')
+        +mediaItem('Rolling Stone',
+                      'How LSD Microdosing Became the Hot New Business Trip',
+                      'http://www.maps.org/news/media/5933-rolling-stone-how-lsd-microdosing-became-the-hot-new-business-trip?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Andrew Leonard',
+                      'November 20, 2015',
+                      'http://maps.org/images/rollingstonelogo.png')
+        +mediaItem('The New Yorker',
+                      'A Field Guide to Psychedelics',
+                      'http://www.maps.org/news/media/5908-the-new-yorker-a-field-guide-to-psychedelics?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Emily Witt',
+                      'November 23, 2015',
+                      'http://www.maps.org/images/newyorkerlogo.png')
+        +mediaItem('California Health Report',
+                      'The Age of Psychedelics',
+                      'http://www.maps.org/news/media/5935-california-health-report-the-age-of-psychedelics?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Matt Perry',
+                      'November 9, 2015',
+                      'http://www.maps.org/images/californiahealthreport.png')
+        +mediaItem('WMBF News',
+                      '"Medical Ecstasy" Helping War Veterans with PTSD',
+                      'http://www.maps.org/news/media/5895-wmbf-news%20-medical-ecstacy-helping-war-veterans-with-ptsd?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'WMBF News Staff',
+                      'November 9, 2015')
+        +mediaItem('CKNW',
+                      'Treating PTSD with MDMA',
+                      'http://www.maps.org/news/media/5936-cknw-treating-ptsd-with-mdma?pk_campaign=EN-Dec15&pk_kwd=media',
+                      'Lynda Steele',
+                      'November 11, 2015',
+                      'http://maps.org/images/rollingstonelogo.png')

@@ -1,10 +1,19 @@
 mixin basicWrapper(classes)
-  table(width='640', cellpadding='0', cellspacing='0', border='0', class='basic-td wrapper ' + classes)
+  table(width='640', cellpadding='0', cellspacing='0', border='0', class='basic-td wrapper ' + (typeof classes !== 'undefined' ? classes : ''))
     tr
-      td(align='center' class='pad-bottom')
+      td(align='center' class='')
         table.container(width='600', cellpadding='0', cellspacing='0', border='0')
           if block
             block
+
+mixin fullWidthWrapper(classes)
+  table(width='640', cellpadding='0', cellspacing='0', border='0', class='no-bg basic-td wrapper ' + (typeof classes !== 'undefined' ? classes : ''))
+    tr
+      td(align='center' class='')
+        table.container(width='640', cellpadding='0', cellspacing='0', border='0')
+          if block
+            block
+
 
 mixin whiteCard(title, classes)
   +basicWrapper('white ' + (typeof classes !== 'undefined' ? classes : ''))
@@ -13,35 +22,35 @@ mixin whiteCard(title, classes)
       hr.bold
     if block
       block
-  +sectionBreak()
+  //- +sectionBreak()
     
 mixin gridWhole(classes)
-  td.mobile(width='600', class=('basic-td' + classes ? classes : ''))
+  td.mobile(width='600', class=('basic-td ' + classes ? classes : ''))
     if block
       block
 
 mixin gridHalf(classes)
-  td.mobile(width='300', class=('basic-td' + classes ? classes : ''))
+  td.mobile(width='300', class=('basic-td ' + classes ? classes : ''))
     if block
       block
     
 mixin gridThird(classes)
-  td.mobile(width='200', class=('basic-td' + classes ? classes : ''))
+  td.mobile(width='200', class=('basic-td ' + classes ? classes : ''))
     if block
       block
     
 mixin gridFourth(classes)
-  td.mobile(width='150', class=('basic-td' + classes ? classes : ''))
+  td.mobile(width='150', class=('basic-td ' + classes ? classes : ''))
     if block
       block
     
 mixin gridFifth(classes)
-  td.mobile(width='120', class=('basic-td' + classes ? classes : ''))
+  td.mobile(width='120', class=('basic-td ' + classes ? classes : ''))
     if block
       block
       
 mixin gridCustom(width, classes)
-  td.mobile(width=width, class=('basic-td' + classes ? classes : ''))
+  td.mobile(width=width, class=('basic-td ' + classes ? classes : ''))
     if block
       block
       
@@ -55,6 +64,23 @@ mixin tocSection(title, items)
   each item in items
     tr: +gridWhole(): + tocItem(++itemCount, item)
 
+
+mixin interstitialImage(src)
+  +basicWrapper('no-bg')
+    tr
+      img.imgClass.interstitial(src=src, width='auto', height='280px')
+    if block
+      tr
+        +gridHalf('caption center')
+          block
+
+mixin interstitialText()
+  if block
+    +basicWrapper('no-bg')
+      tr
+        +gridCustom(400, 'interstitial')
+            block
+
 mixin tocItem(number, title)
   table: tr
     td(class='width-auto')
@@ -62,18 +88,18 @@ mixin tocItem(number, title)
     td
       p(class='margin-zero')= title
 
-mixin interstitialText(text)
-  +row(class='pad-bottom')
-    td.interstitial
-      hr
-      p!= text
-      hr
-
-mixin mediaMention(source, title, url, author, date)
+mixin mediaItem(source, title, url, author, date, imgUrl)
   li.media
+    if imgUrl
+      img.imgClass.small.floatRight(src=imgUrl width=160)
     h3= source
     p: a(href= url)= title
     p.caption= author + ' | ' + date
+
+mixin socialLink(name, url)
+  td(width=75, class=('basic-td social-icon ' + name ))
+    a(href= url)
+      img(src='img/' + name + '@2x.gif' width=48 height=48 alt=name)
 
 mixin introLetterSignoff(signoffText)
   br
@@ -84,8 +110,11 @@ mixin introLetterSignoff(signoffText)
 mixin asideRight(imgSrc, captionText)
   +aside(imgSrc, captionText)
 
-mixin asideLeft(imgSrc, captionText,)
+mixin asideLeft(imgSrc, captionText)
   +aside(imgSrc, captionText, true)
+
+mixin inlineLink(text, url)
+  #[a(href=url)= text]
 
 mixin aside(imgSrc, captionText, leftSide)
   table(class= (leftSide ? 'floatLeft' : 'floatRight'))
@@ -93,7 +122,10 @@ mixin aside(imgSrc, captionText, leftSide)
       +gridFourth()
         img.imgClass(src=imgSrc, height='280')
         p.caption= captionText
-      
+
+mixin centeredImg(imgSrc, captionText)
+  img.imgClass(src=imgSrc, height='280')
+
 mixin donationStats(cost, raised, needed)
   td: table.donationStats: tr
     +gridFourth()
@@ -109,3 +141,4 @@ mixin donationStats(cost, raised, needed)
       a.stats-donate-button(href='http://www.maps.org/donate')
         h2 Donate Now
         span.stats-desc help fund this study
+

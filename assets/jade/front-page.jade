@@ -1,18 +1,18 @@
 = '\n'
 // —————————— FRONT PAGE —————————— 
-+basicWrapper('white front-page')
++basicWrapper('white front-page no-margin-bottom')
   tr
     // ——— COVER IMAGE ———
-    img.imgClass(height='300px' alt='Newsletter cover image' src='http://maps.org/images/dec15enintro.jpg')
+    img.imgClass(width='640px' alt='Newsletter cover image' src='http://maps.org/images/dec15enintro.jpg')
   
++basicWrapper('white front-page no-margin-bottom')
   tr
     +gridCustom('50')
     +gridCustom('500', 'title-container')
       // ——— TITLE BLOCK ———
       h1 Last Experimental Treatments Completed in Colorado Study
       p Phase 2 trials of MDMA-assisted psychotherapy for PTSD near completion
-      hr.bold
-      
+      hr.bold  
     +gridCustom('50')
 
 +basicWrapper('white front-page')

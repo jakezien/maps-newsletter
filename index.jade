@@ -4,12 +4,16 @@ block body
   include assets/jade/header.jade
   include assets/jade/front-page.jade
   include assets/jade/toc.jade
-  include assets/jade/interstitial-image.jade
+  +interstitialImage('http://www.maps.org/images/dec15enmid.png')
+    p The Winter 2015 edition of the MAPS Bulletin includes our Annual Financial Report, plus updates about our psychedelic and marijuana research, harm reduction, and outreach efforts. 
+    p.link #[a(href='http://www.maps.org/news/bulletin/winter-2015-vol-25-no-3-annual-report?pk_campaign=EN-Dec15&pk_kwd=bulletin') Read the new issue.]
   include assets/jade/article-group.jade
-  include assets/jade/interstitial-text.jade
+  +interstitialText()
+    p Stay connected by signing up for the Zendo Project Email Newsletter, and following the Zendo Project on Facebook and Twitter.
   include assets/jade/support.jade
-  //- = '\n'
-  //- include assets/jade/media.jade
-  //- = '\n'
-  //- include assets/jade/footer.jade
-  //- = '\n'
+  include assets/jade/media.jade
+  +interstitialText()
+    p Explore <a href="http://www.maps.org/donate">MAPS In the Media</a> for more psychedelic and medical marijuana research news.
+  include assets/jade/events.jade
+  include assets/jade/more-news.jade
+  include assets/jade/footer.jade
