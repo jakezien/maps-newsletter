@@ -62,7 +62,7 @@ mixin tocSection(title, items)
     +gridWhole
       h2= title
   each item in items
-    tr: +gridWhole(): + tocItem(++itemCount, item)
+    tr: +gridWhole(): +tocItem(++itemCount, item)
 
 
 mixin interstitialImage(src)
@@ -83,15 +83,15 @@ mixin interstitialText()
 
 mixin tocItem(number, title)
   table: tr
-    td(class='width-auto')
+    td(class='toc-num')
       span(class='num')= number
     td
-      p(class='margin-zero')= title
+      p(class='toc-title')= title
 
-mixin mediaItem(source, title, url, author, date, imgUrl)
+mixin mediaItem(source, title, url, author, date, imgUrl, imgPortrait)
   li.media
     if imgUrl
-      img.imgClass.small.floatRight(src=imgUrl width=160)
+      img.imgClass.small.floatRight(src=imgUrl width=160 class=(imgPortrait ? 'portrait' : ''))
     h3= source
     p: a(href= url)= title
     p.caption= author + ' | ' + date
@@ -104,7 +104,7 @@ mixin socialLink(name, url)
 mixin introLetterSignoff(signoffText)
   br
   p= signoffText + ','
-  img.signature.imgClass(src='img/brad_sig.gif' alt='Brad Burge signature')
+  img.signature.imgClass.small(src='img/brad_sig.gif' alt='Brad Burge signature')
   p: i Brad Burge#[br]Maps Director of Communications#[br]and Marketing
 
 mixin asideRight(imgSrc, captionText)
@@ -114,7 +114,7 @@ mixin asideLeft(imgSrc, captionText)
   +aside(imgSrc, captionText, true)
 
 mixin inlineLink(text, url)
-  #[a(href=url)= text]
+  p #[a(href=url)= text]
 
 mixin aside(imgSrc, captionText, leftSide)
   table(class= (leftSide ? 'floatLeft' : 'floatRight'))
@@ -128,16 +128,16 @@ mixin centeredImg(imgSrc, captionText)
 
 mixin donationStats(cost, raised, needed)
   td: table.donationStats: tr
-    +gridFourth()
+    +gridFourth('stats-cell')
       span.stats-amount= '$' + cost
       span.stats-desc estimated study cost
-    +gridFourth()
-      span.stats-amount.middle-border= '$' + raised
-      span.stats-desc.middle-border raised to date
-    +gridFourth()
+    +gridFourth('stats-cell middle-border')
+      span.stats-amount= '$' + raised
+      span.stats-desc raised to date
+    +gridFourth('stats-cell')
       span.stats-amount= '$' + needed
       span.stats-desc still needed
-    +gridFourth.orange
+    +gridFourth('stats-cell orange')
       a.stats-donate-button(href='http://www.maps.org/donate')
         h2 Donate Now
         span.stats-desc help fund this study

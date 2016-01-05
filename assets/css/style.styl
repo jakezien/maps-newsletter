@@ -50,6 +50,9 @@ h3
   margin-top 20px
   margin-bottom 8px
 
+p
+  margin-top 0
+
 p, li
   font-family font-family-serif
   font-size 16px
@@ -70,6 +73,8 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 ul, li
   margin 0
   padding 0
+ul
+  padding-left 18px
 li
   margin-bottom 8px
 
@@ -110,6 +115,14 @@ hr.bold
 .pad-bottom
   padding-bottom 20px !important
 
+.imgClass.small
+  max-width 200px !importants
+  height auto !important
+  
+.imgClass.small.portrait
+  max-height 120px !important
+  width auto !important
+
 .donationStats
   text-align: center !important;
   td
@@ -132,29 +145,91 @@ hr.bold
 .white, .white .container
   margin-bottom 20px
 
+.no-margin-top
+  margin-top 0 !important
+
 .no-margin-bottom
   margin-bottom 0 !important
+
+.no-padding
+  padding 0
   
 img.interstitial
   border 4px solid white
   box-sizing border-box
-    
-@media only screen and (max-width: 480px)
-  .footer-header
-    .floatLeft, .floatRight
-      text-align center
-      float none
-    
-    
 
-//————————————————————— OLD??? ——————————————————————
-//————————————————————— OLD??? ——————————————————————
-//————————————————————— OLD??? ——————————————————————
-//————————————————————— OLD??? ——————————————————————
-//————————————————————— OLD??? ——————————————————————
+.toc-num
+  vertical-align top
 
+.toc-title
+  margin-top 0
+  margin-bottom 8px
+  
+.email-header
+  td
+    text-align center
+    vertical-align bottom
+    
+.header-date, .header-link
+  vertical-align bottom
+  color mTextLtBlue
+  margin 0
+  margin-top 120px
+
+.header-link a
+  color mTextLtBlue
+
+.header-link
+  text-align right
+
+span.num
+  display inline-block
+  font-family font-family-sans
+  font-weight bolder
+  font-size 10px
+  color white
+  background-color mLtBlue
+  border-radius 500px
+  width 17px
+  height 17px
+  line-height 17px
+  text-align center
+  margin-right 6px
+  margin-top 4px
+  position relative
+  top -1px
+  left -1px
+
+.stats-cell
+  padding 0
+  margin 0
+
+.stats-amount
+  font-family font-family-serif
+  font-size 18px
+  color mBlueOld
+  display block
+
+.stats-desc
+  font-family font-family-sans
+  font-size 10px
+  color mBlueOld
+  display block
+
+.middle-border
+  border 1px solid mGreyBlue
+  border-width 0 1px
+
+.stats-donate-button
+  h2
+    color mOrange
+    margin 0
+    text-align center
+  .stats-desc
+    color mOrange
 
 .media
+  clear both
   li
     list-style none
   h3, p
@@ -167,13 +242,45 @@ img.interstitial
     text-shadow none
     color mDkGreyBlue
 
+
+
+@media only screen and (max-width: 599px)
+  .footer-header
+    .floatLeft, .floatRight
+      text-align center
+      float none
+      
+  .header-date, .header-link
+    margin 16px 0 !important
+  
+  .stats-amount
+    margin-top 10px
+  .stats-desc
+    margin-bottom 10px
+  .middle-border
+    border-width 1px 0
+
+  .imgClass.small
+    max-width 110px !important
+    height auto !important
+  
+  .imgClass.small.portrait
+    width auto !important
+    max-height 110px !important
+  
+
+
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+//————————————————————— OLD??? ——————————————————————
+
+
+
 .full-width
   width 100% !important
 
-
-table[class='body'] table.column td.width-auto,
-table[class='body'] table.columns td.width-auto
-  width auto !important
 
 .caption p, p.caption, .caption a
   font-family font-family-sans
@@ -182,6 +289,7 @@ table[class='body'] table.columns td.width-auto
   text-shadow 0 1px 0 mLtGreyBlue
   text-align center
   line-height 18px
+  margin-top 12px
   
 .caption p.link
   margin-top 0
@@ -192,6 +300,7 @@ table[class='body'] table.columns td.width-auto
   hr
     margin 16px 0
   p
+    margin-top 1em
     text-align center !important
     font-size 16px !important
     color mTextLtBlue !important
@@ -221,26 +330,7 @@ table[class='body'] table.columns td.width-auto
   padding 10px 0
   margin-bottom 10px
   
-.imgClass.small {
-  max-height: 100px !important
-}
 
-span.num
-  display inline-block
-  font-family font-family-sans
-  font-weight bolder
-  font-size 10px
-  color white
-  background-color mLtBlue
-  border-radius 500px
-  width 17px
-  height 17px
-  line-height 17px
-  text-align center
-  margin-right 6px
-  position relative
-  top -1px
-  left -1px
 
 body, table.body
   background mGreyBlue
@@ -250,28 +340,6 @@ body, table.body
   background-color #FFFFFF
   margin-bottom 20px
   padding-bottom 40px
-
-
-.email-header
-  td
-    vertical-align bottom
-
-.header-logo, .footer-logo
-  text-align center
-  a
-    width 83%
-    margin-top 16px
-    display inline-block
-
-.header-date, .header-link
-  vertical-align bottom
-  color mTextLtBlue
-
-.header-link a
-  color mTextLtBlue
-
-.header-link
-  text-align right
 
 .footer-contact
   vertical-align bottom
@@ -316,78 +384,4 @@ img.signature
 .table-of-contents h2
   margin-top 24px
 
-td.stats-container.blue
-  text-align center
-  vertical-align middle
-  margin-bottom 30px
-  padding 0
-  table.eight
-    border 1px solid
-    border-radius 3px
-    padding 4px 0 !important
-    text-align center
-    vertical-align middle
-    border-color mGreyBlue
-    border-collapse: separate !important;
-    td
-      padding-bottom 0
-  .block-grid td
-    vertical-align middle
-    text-align center
-    padding 7px 0 !important
 
-td.stats-container.orange
-  text-align center
-  vertical-align middle
-  margin-bottom 30px
-  padding 0
-  .eleven
-    padding 0
-  .stats-cell
-    border 1px solid
-    border-radius 3px
-    padding 0 !important
-    border-color mLtOrange
-    border-collapse: separate !important;
-    width 100% !important
-    a
-      display block
-      padding 9px 0 !important
-      &:hover
-        transition all 0.2s ease
-        border-color mOrange
-        background-color mOrange
-        *
-          color white
-    td
-      text-align center
-      padding 0
-
-
-td.stats-cell
-  text-align center
-  padding 6px !important
-
-.stats-amount
-  font-family font-family-serif
-  font-size 18px
-  color mBlueOld
-  display block
-
-.stats-desc
-  font-family font-family-sans
-  font-size 10px
-  color mBlueOld
-  display block
-
-.middle-border
-  border-left 1px solid mGreyBlue
-  border-right 1px solid mGreyBlue
-
-.stats-donate-button
-  h2
-    color mOrange
-    margin 0
-    text-align center
-  .stats-desc
-    color mOrange

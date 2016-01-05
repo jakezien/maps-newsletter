@@ -1,11 +1,14 @@
 = '\n'
 // —————————— HEADER —————————— 
-+fullWidthWrapper('header email-header no-bg')
++sectionBreak()
+
++fullWidthWrapper('email-header no-bg')
   tr
-    +gridFourth('header-date') November 2015
-    +gridHalf('header-logo')
+    +gridWhole()
+      p.header-date.floatLeft November 2015
+      p.header-link.floatRight 
+        a(href='http://www.maps.org') maps.org
       a(href='http://www.maps.org')
-        img.imgClass(src='img/maps@2x.gif' alt='MAPS logo' width='100%')
-    +gridFourth('header-link')
-      a(href='http://www.maps.org') maps.org
+        img.header-logo(src='img/maps@2x.gif' alt='MAPS logo' width='200')
+
 +sectionBreak()

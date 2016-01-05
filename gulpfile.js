@@ -98,8 +98,8 @@ gulp.task('juice', function() {
 });
 
 gulp.task('minify-html', function() {
-  return gulp.src('dev/index.html')
-    .pipe(htmlMin())
+  return gulp.src('prod/index.html')
+    .pipe(htmlMin(htmlMinOpts))
     .pipe(gulp.dest('./prod/'))
 });
 
